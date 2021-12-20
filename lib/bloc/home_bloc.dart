@@ -13,10 +13,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   }
 
   FutureOr<void> _addDecrement(Decerement event, emit) {
+    emit(HomeLoading());
     emit(HomeLoadingSucsess(angka: event.decremnet - 1));
   }
 
   FutureOr<void> _addIcrement(Increment event, emit) {
+    emit(HomeLoading());
     emit(HomeLoadingSucsess(angka: event.increment + 1));
   }
 }
